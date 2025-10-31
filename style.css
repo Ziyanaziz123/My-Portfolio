@@ -1,8 +1,10 @@
   body {
       margin: 0;
+      padding: 0;
       background: #f4f4f4;
       font-family: "Inter", sans-serif;
- 
+      overflow-x: hidden;
+      box-sizing: border-box;
     }
 
 
@@ -21,7 +23,7 @@ nav {
   z-index: 1000;
   height: 80px;
    font-family: "Inter", sans-serif;
-}
+    }
 /* Navbar links */
 nav ul li a {
   color: #fff;
@@ -33,7 +35,7 @@ nav ul li a {
 
 /* Hover text color */
 nav ul li a:hover {
-  color: #64ffda; /* or apna accent color use karo */
+  color: #64ffda; 
 }
 
 /* Underline animation effect */
@@ -104,12 +106,13 @@ ul li a {
     display: block;
   }
 
+@media (max-width: 768px) {
   nav ul {
-    position: absolute;
-    top: 30px;
+    position: fixed; /* absolute → fixed */
+    top: 80px;       /* nav height ke barabar */
     left: 0;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 80px);
     background: #003f5c;
     flex-direction: column;
     justify-content: center;
@@ -117,13 +120,13 @@ ul li a {
     gap: 20px;
     display: none;
     transition: all 0.4s ease;
-   
-  }
 
+  }
   nav ul.active {
     display: flex;
-    justify-content: center;
   }
+}
+
 }
 nav ul li a {
   color: #fff;
@@ -135,7 +138,7 @@ nav ul li a {
 
 /* Hover text color */
 nav ul li a:hover {
-  color: #64ffda; /* or apna accent color use karo */
+  color: #64ffda; 
 }
 
 /* Underline animation effect */
@@ -309,14 +312,17 @@ nav ul li a::after {
        transition: all 0.3s ease;
      cursor: pointer;
 }
-      }
-    #menu {
+#menu {
      justify-content: flex-start;
     align-items: start;
     text-align: start; 
-    height: 159px;
+    height: 160px;
+    width: 100%;
   
      }
+      }
+
+   
       .text-content h1{
         font-size:32px;
        font-family: "Montserrat", sans-serif;
@@ -424,7 +430,7 @@ nav ul li a::after {
   }
 }
 
-
+ 
 /* ====== PROJECTS SECTION ====== */
 .projects-section {
   padding: 80px 60px;
