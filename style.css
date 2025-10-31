@@ -302,7 +302,21 @@ nav ul li a::after {
         align-items: center;
        
       }
-
+      .logo:hover {
+       color: #fff;
+       transform: scale(1.1);
+      text-shadow: 0 0 12px rgba(100, 255, 218, 0.6);
+       transition: all 0.3s ease;
+     cursor: pointer;
+}
+      }
+    #menu {
+     justify-content: flex-start;
+    align-items: start;
+    text-align: start; 
+    height: 159px;
+  
+     }
       .text-content h1{
         font-size:32px;
        font-family: "Montserrat", sans-serif;
@@ -319,7 +333,7 @@ nav ul li a::after {
         height:220px;
         margin-bottom:20px;
       }
-    }
+    
     html {
   scroll-behavior: smooth;
 }
@@ -602,6 +616,8 @@ nav ul li a::after {
     padding: 50px 25px;
   }
 
+
+}
   .contact-section h2 {
     font-size: 28px;
   }
@@ -609,7 +625,7 @@ nav ul li a::after {
   .contact-form {
     width: 100%;
   }
-}
+
 /* ====== FOOTER SECTION ====== */
 .footer {
   background-color: #003f5c;
