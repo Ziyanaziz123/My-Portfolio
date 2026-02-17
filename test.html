@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Fix</title>
+    <style>
+        /* 1. Variables Define Karein */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --btn-bg: #007bff;
+        }
+
+        /* 2. Dark Mode settings */
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #ffffff;
+            --btn-bg: #ffcc00;
+        }
+
+        /* 3. Global Styles - Ye asar dikhayenge */
+        body {
+            background-color: var(--bg-color) !important; /* Force apply */
+            color: var(--text-color) !important;
+            transition: 0.4s;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #theme-toggle {
+            background-color: var(--btn-bg);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Agar background change hui to code sahi hai!</h1>
+    <p>Neeche wala button daba kar check karein.</p>
+    
+    <button id="theme-toggle">Change Mode</button>
+
+    <script>
+        // Direct script taakay koi file link ka masla na ho
+        const toggleBtn = document.getElementById('theme-toggle');
+
+        toggleBtn.addEventListener('click', function() {
+            // Check karein ke abhi html par kya attribute hai
+            let currentTheme = document.documentElement.getAttribute('data-theme');
+            
+            if (currentTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+                console.log("Light Mode Activated");
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                console.log("Dark Mode Activated");
+            }
+        });
+    </script>
+</body>
+</html>

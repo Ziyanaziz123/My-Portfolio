@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #030712; color: #f3f4f6; overflow-x: hidden; }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .accent-border {
+            border-left: 4px solid #22d3ee;
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-6xl mx-auto flex justify-between items-center mb-16">
+        <a href="index.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center gap-2 group">
+            <i class="fas fa-arrow-left group-hover:-translate-x-2 transition"></i> Back to Home
+        </a>
+    </div>
+
+    <main class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-start">
+            
+            <div class="lg:col-span-4 space-y-6">
+                <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-cyan-500/10">
+                    <img src="images/my img.jpg" 
+                         alt="Profile Picture" class="w-full grayscale hover:grayscale-0 transition duration-500">
+                </div>
+
+                <div class="glass-panel p-6 rounded-2xl space-y-4">
+                    <h4 class="text-cyan-400 font-bold text-xs uppercase tracking-[0.2em]">Contact Details</h4>
+                    <div class="text-sm space-y-3">
+                        <p class="flex justify-between"><span class="text-gray-500">Based in:</span> Karachi, PAKISTAN</p>
+                        <p class="flex justify-between"><span class="text-gray-500">Email:</span> ziyanazizz23@gmail.com</p>
+                        <p class="flex justify-between"><span class="text-gray-500">Status:</span> Open to Work</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-8">
+                <span class="text-cyan-400 font-mono tracking-widest uppercase text-sm">Biography</span>
+                <h1 class="text-5xl md:text-7xl font-bold mt-2 mb-8">Who <span class="opacity-40 italic">I Am.</span></h1>
+                
+                <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
+                    <p>
+                        I am an <span class="text-white font-semibold">Intermediate Full-Stack Developer</span> with a strong focus on building efficient and scalable server-side applications. My journey in tech started with a deep curiosity about how data flows across the web, which led me to master the core fundamentals of frontend and backend development.
+                    </p>
+                    
+                    <p>
+                        I specialize in creating clean, maintainable code using <span class="text-white">HTML, CSS, and JavaScript</span> for the frontend, while leveraging the power of <span class="text-white">Node.js, Express, and NestJS</span> for robust backend logic. I am comfortable working with both SQL and NoSQL databases like <span class="text-white">MySQL and MongoDB</span>.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-8 py-8">
+                        <div class="accent-border pl-6">
+                            <h3 class="text-white font-bold text-xl mb-2">My Approach</h3>
+                            <p class="text-sm">I believe in continuous learning. As an intermediate developer, I focus on writing "Dry" code and understanding the underlying architecture of every system I build.</p>
+                        </div>
+                        <div class="accent-border pl-6 border-cyan-500/50">
+                            <h3 class="text-white font-bold text-xl mb-2">Tech Philosophy</h3>
+                            <p class="text-sm">Functionality comes first. Whether it's a complex NestJS microservice or a simple JavaScript script, I aim for performance and reliability.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-8 pt-6">
+                        <h3 class="text-2xl font-bold text-white">Pathways</h3>
+                        <div class="glass-panel p-6 rounded-xl flex gap-6">
+                                <h4 class="text-white font-bold">Development Career</h4>
+                                <p class="text-sm">Working on various full-stack projects, focusing on API optimization and database management using the modern JS ecosystem.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-10 flex flex-wrap gap-4">
+                        <a href="mailto:ziyanazizz23@gmail.com" class="bg-cyan-500 hover:bg-cyan-600 text-[#030712] px-8 py-3 rounded-lg font-bold transition">Get in Touch</a>
+                        <a href="MUHAMMAD_ZIYAN_CV.docx" class="border border-white/10 hover:bg-white/5 px-8 py-3 rounded-lg font-bold transition">View Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-24 py-10 text-center border-t border-white/5 opacity-50 text-xs tracking-widest uppercase">
+        Designed & Coded by M.Ziyan &copy; 2026
+    </footer>
+
+</body>
+</html>
