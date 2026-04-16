@@ -9,7 +9,6 @@ const result = document.getElementById('result');
 
 
 
-
 menuToggle.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
     menuIcon.classList.toggle('fa-bars');
