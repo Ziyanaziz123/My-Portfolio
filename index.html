@@ -1,299 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premium Full-Stack Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
-
-    :root {
-      --bg: #030712;
-      --accent: #22d3ee;
-    }
-
-    body {
-      font-family: 'Space Grotesk', sans-serif;
-      background-color: var(--bg);
-      color: #f3f4f6;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-
-    /* Animated Background Mesh */
-    .mesh-gradient {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
-      z-index: -1;
-    }
-
-    .glass-card {
-      background: rgba(255, 255, 255, 0.02);
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .glass-card:hover {
-      background: rgba(255, 255, 255, 0.05);
-      transform: translateY(-8px) scale(1.02);
-      border-color: var(--accent);
-    }
-
-    /* Smooth Mobile Menu */
-    #mobile-menu {
-      transition: transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
-      transform: translateX(100%);
-    }
-
-    #mobile-menu.active {
-      transform: translateX(0);
-    }
-
-    .btn-gradient {
-      background: linear-gradient(90deg, #06b6d4, #3b82f6);
-      transition: 0.3s;
-    }
-
-    .btn-gradient:hover {
-      filter: brightness(1.1);
-      box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
-    }
-
-    .skill-icon {
-      filter: grayscale(0.5);
-      transition: 0.3s;
-    }
-
-    .glass-card:hover .skill-icon {
-      filter: grayscale(0);
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="mesh-gradient"></div>
-
-  <nav class="fixed w-full z-[100] border-b border-white/5 bg-[#030712]/80 backdrop-blur-lg">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold tracking-widest uppercase">
-        <span class="text-white">Build</span><span class="text-cyan-400">Better.</span>
-      </div>
-
-      <ul class="hidden md:flex space-x-10 text-sm font-medium tracking-widest text-gray-400 uppercase">
-        <li><a href="#home" class="hover:text-cyan-400 transition">Home</a></li>
-        <li><a href="#skills" class="hover:text-cyan-400 transition">Skills</a></li>
-        <li><a href="#contact-form-container"class="text-white border border-white/20 px-4 py-2 hover:bg-white hover:text-black transition">Contact</a>
-        </li>
-      </ul>
-
-      <button id="menu-toggle" class="md:hidden text-2xl z-[110] text-cyan-400">
-        <i class="fas fa-bars" id="menu-icon"></i>
-      </button>
-    </div>
-  </nav>
-
-  <div id="mobile-menu"
-    class="fixed inset-0 bg-[#030712] z-[105] flex flex-col items-center justify-center space-y-8 text-3xl font-bold md:hidden">
-    <a href="#skills" class="nav-link">Skills</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="#contact-form-container" class="nav-link text-cyan-400">Contact</a>
-  </div>
-  <section id="home" class="min-h-screen flex items-center px-6 pt-20 relative">
-    <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 blur-[120px] -z-10"></div>
-
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-      <div class="reveal-left">
-        <p class="text-cyan-400 font-mono mb-4 tracking-[0.3em] uppercase font-bold">Junior Backend Developer</p>
-
-        <h1 class="text-6xl md:text-8xl font-bold text-white mb-4 leading-tight">
-          I'm <span class="text-cyan-400">M.Ziyan.</span>
-        </h1>
-
-        <h2 class="text-2xl md:text-3xl font-medium text-gray-400 mb-8 italic">
-          Architecting systems to <span class="border-b-2 border-white text-white">build better</span> digital
-          solutions.
-        </h2>
-
-        <p class="text-gray-500 text-lg max-w-lg mb-10 leading-relaxed">
-          Junior Backend Developer specializing in Node.js, Express, and NestJS. I bridge the gap between complex logic and scalable server-side reality.
-        </p>
-
-        <div class="flex flex-wrap gap-6">
-          <a href="projects.html"
-            class="btn-gradient px-10 py-4 rounded-full font-bold text-white uppercase text-xs tracking-widest shadow-lg shadow-cyan-500/20">View
-            My Work</a>
-          <a href="about.html"
-            class="px-10 py-4 border border-white/10 rounded-full font-bold text-white uppercase text-xs tracking-widest hover:bg-white/5 transition">More
-            About Me</a>
-        </div>
-      </div>
-
-      <div class="hidden lg:block reveal-right relative">
-        <div class="relative z-10 p-4 glass-card rounded-[2rem]">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
-            alt="Coding Dashboard" class="rounded-2xl shadow-2xl opacity-80">
-        </div>
-        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-blue-500/20 blur-3xl rounded-full"></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" class="py-32 px-6">
-    <div class="max-w-7xl mx-auto">
-      <div class="mb-20 reveal-up">
-        <h2 class="text-4xl md:text-6xl font-bold mb-4 italic">Core Tech Stack</h2>
-        <div class="h-1 w-24 bg-cyan-400"></div>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="glass-card p-10 rounded-3xl reveal-up">
-          <div class="flex gap-4 mb-6">
-            <i class="fab fa-html5 text-3xl text-orange-500"></i>
-            <i class="fab fa-css3-alt text-3xl text-blue-500"></i>
-            <i class="fab fa-js text-3xl text-yellow-400"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Frontend Foundation</h3>
-          <p class="text-gray-500 text-sm">Semantic HTML, Modern CSS (Tailwind/SCSS), and Clean JavaScript.</p>
-        </div>
-
-        <div class="glass-card p-10 rounded-3xl reveal-up" style="transition-delay: 100ms;">
-          <div class="flex gap-4 mb-6">
-            <i class="fab fa-node-js text-3xl text-green-500"></i>
-            <i class="fas fa-server text-3xl text-red-500"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Node & NestJS</h3>
-          <p class="text-gray-500 text-sm">Enterprise-grade server-side architecture and RESTful APIs.</p>
-        </div>
-
-        <div class="glass-card p-10 rounded-3xl reveal-up" style="transition-delay: 200ms;">
-          <div class="flex gap-4 mb-6">
-            <i class="fas fa-leaf text-3xl text-green-400"></i>
-            <i class="fas fa-database text-3xl text-blue-400"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-2">SQL & NoSQL</h3>
-          <p class="text-gray-500 text-sm">Optimized schemas with MongoDB and MySQL/PostgreSQL.</p>
-        </div>
-
-        <div class="glass-card p-10 rounded-3xl reveal-up" style="transition-delay: 300ms;">
-          <div class="flex gap-4 mb-6 text-cyan-400">
-            <i class="fas fa-bolt text-3xl"></i>
-          </div>
-          <h3 class="text-xl font-bold mb-2">Express.js</h3>
-          <p class="text-gray-500 text-sm">High-performance middleware and microservices logic.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact-form" class="py-32 px-6 relative overflow-hidden">
-    <div
-      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-500/5 blur-[120px] -z-10">
-    </div>
-
-    <div class="max-w-5xl mx-auto">
-      <div class="grid lg:grid-cols-2 gap-16 items-start">
-
-        <div class="reveal-left">
-          <h2 class="text-5xl md:text-7xl font-bold mb-6 italic leading-tight">
-            Let's <span class="text-cyan-400">Connect.</span>
-          </h2>
-          <p class="text-gray-400 text-lg mb-10 leading-relaxed">
-            Have a project in mind or just want to say hi? Feel free to reach out. I'm always open to discussing new
-            projects, creative ideas, or opportunities to be part of your visions.
-          </p>
-
-          <div class="space-y-6">
-            <div class="flex items-center gap-6 group">
-              <div
-                class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-cyan-400/20 transition-all">
-                <i class="fas fa-envelope text-cyan-400"></i>
-              </div>
-              <div>
-                <p class="text-xs uppercase tracking-widest text-gray-500">Email Me</p>
-                <p class="text-lg font-medium text-white">ziyanazizz23@gmail.com</p>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-6 group">
-              <div
-                class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-cyan-400/20 transition-all">
-                <i class="fas fa-location-dot text-cyan-400"></i>
-              </div>
-              <div>
-                <p class="text-xs uppercase tracking-widest text-gray-500">Location</p>
-                <p class="text-lg font-medium text-white">Karachi, Pakistan</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div id="contact-form-container" class="glass-card p-8 md:p-12 rounded-[2.5rem] reveal-right">
-          <form action="https://api.web3forms.com/submit" id="contect-form" class="space-y-6" method="POST">
-            <input type="hidden" name="access_key" value="b88361dd-f2fe-41aa-9529-52eb03520bf5">
-
-            <div class="relative group">
-              <input type="text" id="name" name="name" required
-                class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-cyan-400 transition-all text-white placeholder-transparent peer">
-              <label for="name"
-                class="absolute left-6 top-4 text-gray-500 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-cyan-400 bg-[#0b0f1a] px-2 rounded">Your
-                Name</label>
-            </div>
-
-            <div class="relative group">
-              <input type="email" id="email" name="email" required
-                class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-cyan-400 transition-all text-white placeholder-transparent peer">
-              <label for="email"
-                class="absolute left-6 top-4 text-gray-500 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-cyan-400 bg-[#0b0f1a] px-2 rounded">Email
-                Address</label>
-            </div>
-
-            <div class="relative group">
-              <textarea id="message" name="message" rows="4" required
-                class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-cyan-400 transition-all text-white placeholder-transparent peer resize-none"></textarea>
-              <label for="message"
-                class="absolute left-6 top-4 text-gray-500 transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-3 peer-focus:text-xs peer-focus:text-cyan-400 bg-[#0b0f1a] px-2 rounded">Tell
-                me about the project</label>
-            </div>
-
-            <button type="submit"
-              class="w-full btn-gradient py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-sm hover:scale-[1.02] active:scale-95 transition-transform">
-              Send Message <i class="fas fa-paper-plane ml-2"></i>
-            </button>
-          </form>
-
-          <div id="result" class="mt-6 text-center font-medium text-gray-400"></div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <footer id="contact" class="py-20 border-t border-white/5 bg-black/40">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-5xl md:text-7xl font-bold mb-10 reveal-up underline decoration-cyan-500/30">Ready to Start?</h2>
-      <p class="text-gray-400 mb-10 max-w-xl mx-auto">I'm currently available for freelance work and full-time
-        positions.</p>
-      <div class="flex justify-center gap-8 mb-16">
-        <a href="https://github.com/Ziyanaziz123" class="text-3xl text-gray-500 hover:text-cyan-400 transition-all"><i
-            class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/muhammad-ziyan-5421bb2b6/"
-          class="text-3xl text-gray-500 hover:text-cyan-400 transition-all"><i class="fab fa-linkedin"></i></a>
-      </div>
-      <p class="text-xs tracking-widest text-gray-600 uppercase">&copy; 2026 Crafted with Passion</p>
-    </div>
-  </footer>
-  <script src="script.js"></script>
-</body>
-
-</html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Muhammad Ziyan | Backend Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body data-page="home">
+<div id="bar"></div><canvas id="bg"></canvas><div class="vig"></div><div id="c1"></div><div id="c2"></div>
+<nav><div class="logo m">ziyan@dev<b>:~$</b></div>
+<div class="lk m"><a href="index.html" class="on">./home</a><a href="about.html">./about</a><a href="projects.html">./projects</a></div></nav>
+<main>
+<section class="view on" id="home">
+ <div class="tag m">&gt;Backend Developer · Karachi, PK</div>
+ <div class="hero"><svg class="av" viewBox="0 0 200 200" role="img" aria-label="Avatar of Ziyan waving"><defs><clipPath id="cc"><circle cx="100" cy="100" r="92"/></clipPath></defs><circle cx="100" cy="100" r="96" fill="#0b1220" stroke="#22d3ee" stroke-width="3"/><g clip-path="url(#cc)"><path d="M20 200Q30 150 70 142L130 142Q170 150 180 200Z" fill="#1f2937"/><rect x="88" y="120" width="24" height="28" rx="8" fill="#d39b73"/><path d="M80 142L100 170L120 142Z" fill="#0b1220"/><ellipse cx="64" cy="96" rx="5" ry="9" fill="#d39b73"/><ellipse cx="136" cy="96" rx="5" ry="9" fill="#d39b73"/><ellipse cx="100" cy="92" rx="36" ry="40" fill="#e0ac85"/><path d="M62 90Q58 46 100 44Q142 46 138 90Q130 66 100 64Q70 66 62 90Z" fill="#111827"/><rect x="69" y="85" width="26" height="19" rx="7" fill="rgba(255,255,255,.14)" stroke="#fff" stroke-width="3.5"/><rect x="105" y="85" width="26" height="19" rx="7" fill="rgba(255,255,255,.14)" stroke="#fff" stroke-width="3.5"/><path d="M95 93H105M69 91L62 88M131 91L138 88" stroke="#fff" stroke-width="3" fill="none"/><circle cx="82" cy="94" r="3" fill="#111"/><circle cx="118" cy="94" r="3" fill="#111"/><path d="M88 113Q100 124 112 113" stroke="#7c3f1d" stroke-width="3" fill="none" stroke-linecap="round"/><g class="wv"><path d="M150 168Q174 156 168 122" stroke="#1f2937" stroke-width="20" stroke-linecap="round" fill="none"/><circle cx="168" cy="108" r="13" fill="#e0ac85"/></g></g></svg><h1>I’m <span class="gl" data-t="M.Ziyan">M.Ziyan</span></h1></div>
+ <div class="term" style="max-width:640px"><div class="th m"><i style="background:#f87171"></i><i style="background:#fbbf24"></i><i style="background:#4ade80"></i>&nbsp;bash — ziyan</div>
+ <div class="tb m" id="tw"></div></div>
+ <div class="btns">
+  <a class="b p" href="projects.html">$ view --work</a>
+  <a class="b" href="Muhammad_Ziyan_Resume.pdf" download>↓ download_cv.pdf</a>
+  <a class="b" href="#contact">$ contact --me</a></div>
+ <div class="rv" style="margin-top:70px"><div class="tag m">// core_stack</div><h2>Core <span class="ac">Tech Stack</span></h2>
+ <div class="sk">
+  <div class="card"><h3 class="m">backend</h3><p>Node.js, Express, NestJS, TypeScript — REST APIs & scalable server architecture.</p></div>
+  <div class="card"><h3 class="m">databases</h3><p>PostgreSQL, MongoDB, MySQL — schema design, indexing, multi-tenant isolation.</p></div>
+  <div class="card"><h3 class="m">realtime & auth</h3><p>Socket.io / WebSockets and JWT-secured APIs with role-based access.</p></div>
+  <div class="card"><h3 class="m">frontend</h3><p>Semantic HTML, modern CSS and clean JavaScript.</p></div></div></div>
+ <div class="rv" id="contact" style="margin-top:90px"><div class="two"><div>
+  <div class="tag m">// contact</div><h2>Let’s <span class="ac">Connect.</span></h2>
+  <p style="color:#9aa5b1;line-height:1.8">Open to full-time and freelance backend roles. Send me a message and I’ll get back to you.</p>
+  <p class="m"><a href="mailto:ziyanazizz23@gmail.com" style="color:var(--ac);text-decoration:none">ziyanazizz23@gmail.com</a><br><span style="color:var(--mu)">Karachi, Pakistan</span></p>
+  <div class="soc m"><a href="https://github.com/Ziyanaziz123">[ github ]</a><a href="https://www.linkedin.com/in/muhammad-ziyan-5421bb2b6/">[ linkedin ]</a></div></div>
+  <div class="term" style="padding:24px"><form id="contect-form" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="b88361dd-f2fe-41aa-9529-52eb03520bf5"><input type="hidden" name="subject" value="New message from your portfolio"><input type="hidden" name="from_name" value="Portfolio Contact Form">
+  <input name="name" placeholder="// your name" required><input type="email" name="email" placeholder="// email address" required>
+  <textarea name="message" rows="4" placeholder="// tell me about the project" required></textarea>
+  <button class="b p" type="submit">$ send_message</button></form><div id="result"></div></div></div></div>
+</section>
+</main>
+<footer class="m">Designed &amp; coded by M.Ziyan © 2026</footer>
+<script src="script.js"></script>
+</body></html>

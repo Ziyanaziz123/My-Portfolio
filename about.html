@@ -1,99 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me | Full-Stack Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
-        body { font-family: 'Space Grotesk', sans-serif; background-color: #030712; color: #f3f4f6; overflow-x: hidden; }
-        
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .accent-border {
-            border-left: 4px solid #22d3ee;
-        }
-    </style>
-</head>
-<body class="p-6 md:p-12">
-
-    <div class="max-w-6xl mx-auto flex justify-between items-center mb-16">
-        <a href="index.html" class="text-gray-400 hover:text-cyan-400 transition flex items-center gap-2 group">
-            <i class="fas fa-arrow-left group-hover:-translate-x-2 transition"></i> Back to Home
-        </a>
-    </div>
-
-    <main class="max-w-6xl mx-auto">
-        <div class="grid lg:grid-cols-12 gap-12 items-start">
-            
-            <div class="lg:col-span-4 space-y-6">
-                <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-cyan-500/10">
-                    <img src="images/my img.jpg" 
-                         alt="Profile Picture" class="w-full grayscale hover:grayscale-0 transition duration-500">
-                </div>
-
-                <div class="glass-panel p-6 rounded-2xl space-y-4">
-                    <h4 class="text-cyan-400 font-bold text-xs uppercase tracking-[0.2em]">Contact Details</h4>
-                    <div class="text-sm space-y-3">
-                        <p class="flex justify-between"><span class="text-gray-500">Based in:</span> Karachi, PAKISTAN</p>
-                        <p class="flex justify-between"><span class="text-gray-500">Email:</span> ziyanazizz23@gmail.com</p>
-                        <p class="flex justify-between"><span class="text-gray-500">Status:</span> Open to Work</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="lg:col-span-8">
-                <span class="text-cyan-400 font-mono tracking-widest uppercase text-sm">Biography</span>
-                <h1 class="text-5xl md:text-7xl font-bold mt-2 mb-8">Who <span class="opacity-40 italic">I Am.</span></h1>
-                
-                <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
-                    <p>
-                        I am an <span class="text-white font-semibold">Junior Backend Developer</span> with a strong focus on building efficient and scalable server-side applications.My journey in tech is driven by a fascination with system architecture and data flow, leading me to specialize in creating the robust "brains" behind modern web applications.
-
-                    </p>
-                    
-                    <p>
-                       I excel at turning complex business requirements into clean, maintainable code using<span class="text-white">Node.js, Express, and NestJS. </span>  With a deep understanding of both SQL and NoSQL environments,I design efficient data models using MySQL and MongoDB, ensuring your application remains fast and reliable under heavy loads.
-                    </p>
-
-                    <div class="grid md:grid-cols-2 gap-8 py-8">
-                        <div class="accent-border pl-6">
-                            <h3 class="text-white font-bold text-xl mb-2">My Approach</h3>
-                            <p class="text-sm">I believe in continuous learning. As an intermediate developer, I focus on writing "Dry" code and understanding the underlying architecture of every system I build.</p>
-                        </div>
-                        <div class="accent-border pl-6 border-cyan-500/50">
-                            <h3 class="text-white font-bold text-xl mb-2">Tech Philosophy</h3>
-                            <p class="text-sm">Functionality comes first. Whether it's a complex NestJS microservice or a simple JavaScript script, I aim for performance and reliability.</p>
-                        </div>
-                    </div>
-
-                    <div class="space-y-8 pt-6">
-                        <h3 class="text-2xl font-bold text-white">Pathways</h3>
-                        <div class="glass-panel p-6 rounded-xl flex gap-6">
-                                <h4 class="text-white font-bold">Development Career</h4>
-                                <p class="text-sm">Working on various full-stack projects, focusing on API optimization and database management using the modern JS ecosystem.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="pt-10 flex flex-wrap gap-4">
-                        <a href="mailto:ziyanazizz23@gmail.com" class="bg-cyan-500 hover:bg-cyan-600 text-[#030712] px-8 py-3 rounded-lg font-bold transition">Get in Touch</a>
-                        <a href="Muhammad_Ziyan_Resume (1).pdf" class="border border-white/10 hover:bg-white/5 px-8 py-3 rounded-lg font-bold transition">View Resume</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="mt-24 py-10 text-center border-t border-white/5 opacity-50 text-xs tracking-widest uppercase">
-        Designed & Coded by M.Ziyan &copy; 2026
-    </footer>
-
-</body>
-</html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>About | Muhammad Ziyan</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head><body data-page="about">
+<div id="bar"></div><canvas id="bg"></canvas><div class="vig"></div><div id="c1"></div><div id="c2"></div>
+<nav><div class="logo m">ziyan@dev<b>:~$</b></div>
+<div class="lk m"><a href="index.html">./home</a><a href="about.html" class="on">./about</a><a href="projects.html">./projects</a></div></nav>
+<main>
+<section class="view on" id="about">
+ <div class="tag m">&gt; cat about.md</div><h1 style="font-size:clamp(40px,8vw,78px)">Who <span class="gl" data-t="I Am.">I Am.</span></h1>
+ <div class="two"><div class="bio">
+  <p>I’m a <b>Junior Backend Developer</b> focused on building efficient, scalable server-side applications. I’m fascinated by system architecture and data flow, and I enjoy building the robust “brains” behind modern web apps.</p>
+  <p>I turn business requirements into clean, maintainable code with <b>Node.js, Express and NestJS</b>, and I design data models across SQL and NoSQL — <b>PostgreSQL, MongoDB and MySQL</b>.</p>
+  <div class="tl"><h4>Backend Developer Intern</h4><span class="m">Paz Technologies, Karachi · Nov 2025 – Apr 2026</span>
+  <p>Shipped NestJS/Node.js features in a 4-person team, built 15+ REST endpoints, JWT authentication with role-based protection, and optimized MongoDB queries for multi-tenant isolation.</p></div>
+  <div class="tl"><h4>Web Development Certification</h4><span class="m">SMIT — Saylani Mass IT Training</span></div>
+  <div class="btns"><a class="b p" href="Muhammad_Ziyan_Resume (1).pdf" download>↓ download_cv.pdf</a><a class="b" href="mailto:ziyanazizz23@gmail.com">$ get_in_touch</a></div></div>
+ <div><figure class="ph rv"><img src="ziyan.jpg" alt="Muhammad Ziyan" loading="lazy"><figcaption class="m">Karachi, PK</figcaption></figure>
+ <div class="term rv"><div class="th m"><i style="background:#f87171"></i><i style="background:#fbbf24"></i><i style="background:#4ade80"></i>&nbsp;profile.json</div>
+ <div class="tb m" style="font-size:13px"><span style="color:var(--mu)">{</span><br>&nbsp;&nbsp;<span class="ac">"name"</span>: <span style="color:var(--gr)">"Muhammad Ziyan"</span>,<br>&nbsp;&nbsp;<span class="ac">"role"</span>: <span style="color:var(--gr)">"Backend Developer"</span>,<br>&nbsp;&nbsp;<span class="ac">"location"</span>: <span style="color:var(--gr)">"Karachi, PK"</span>,<br>&nbsp;&nbsp;<span class="ac">"stack"</span>: [<span style="color:var(--gr)">"NestJS"</span>, <span style="color:var(--gr)">"Node.js"</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:var(--gr)">"PostgreSQL"</span>, <span style="color:var(--gr)">"MongoDB"</span>,<br>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:var(--gr)">"Socket.io"</span>, <span style="color:var(--gr)">"JWT"</span>],<br>&nbsp;&nbsp;<span class="ac">"openToWork"</span>: <span style="color:#fbbf24">true</span><br><span style="color:var(--mu)">}</span></div></div></div></div>
+</section>
+</main>
+<footer class="m">Designed &amp; coded by M.Ziyan © 2026</footer>
+<script src="script.js"></script>
+</body></html>
